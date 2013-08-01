@@ -2,7 +2,7 @@
 echo -n "IP Address :"
 read IP
 if [[ $IP =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
-echo "$IP OK"
+  echo "$IP OK"
 else
-echo "$IP FAIL"
+  echo "$IP FAIL"
 fi
