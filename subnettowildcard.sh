@@ -36,13 +36,80 @@ w30="0.0.0.3"
 #Variable Bits in Mask
 sub=`echo $1 | cut -d/ -f2`
 
+#IP Address
+ip=`echo $1 | cut -d/ -f1`
+
+#Bits in Mask to Wildcard Mask
 if [ "$sub" = "8" ]; then
-
+w=`echo $ip | sed -e 's/\/$sub/ $w8/g'`
+echo $ip $w
 elif [ "$sub" = "9" ]; then
-elif [ "$sub" = "9" ]; then
-
+w=`echo $ip | sed -e 's/\/$sub/ $w9/g'`
+echo $ip $w
+elif [ "$sub" = "10" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w10/g'`
+echo $ip $w
+elif [ "$sub" = "11" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w11/g'`
+echo $ip $w
+elif [ "$sub" = "12" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w12/g'`
+echo $ip $w
+elif [ "$sub" = "13" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w13/g'`
+echo $ip $w
+elif [ "$sub" = "14" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w14/g'`
+echo $ip $w
+elif [ "$sub" = "15" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w15/g'`
+echo $ip $w
+elif [ "$sub" = "16" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w16/g'`
+echo $ip $w
+elif [ "$sub" = "17" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w17/g'`
+echo $ip $w
+elif [ "$sub" = "18" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w18/g'`
+echo $ip $w
+elif [ "$sub" = "19" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w19/g'`
+echo $ip $w
+elif [ "$sub" = "20" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w20/g'`
+echo $ip $w
+elif [ "$sub" = "21" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w21/g'`
+echo $ip $w
+elif [ "$sub" = "22" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w22/g'`
+echo $ip $w
+elif [ "$sub" = "23" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w23/g'`
+echo $ip $w
+elif [ "$sub" = "24" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w24/g'`
+echo $ip $w
+elif [ "$sub" = "25" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w25/g'`
+echo $ip $w
+elif [ "$sub" = "26" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w26/g'`
+echo $ip $w
+elif [ "$sub" = "27" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w27/g'`
+echo $ip $w
+elif [ "$sub" = "28" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w28/g'`
+echo $ip $w
+elif [ "$sub" = "29" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w29/g'`
+echo $ip $w
+elif [ "$sub" = "30" ]; then
+w=`echo $ip | sed -e 's/\/$sub/ $w30/g'`
+echo $ip $w
 else
-
+echo "$1 is not supported or incorrect subnet."
 fi
-
 
