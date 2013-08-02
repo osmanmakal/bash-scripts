@@ -18,7 +18,10 @@ cat osman.txt
 Etc. Etc. Etc.
 
 
+
 for i in $(cat osman.txt); do sh subnettowildcard.sh  $i;done >> osman-wildcard.txt
+
+
 
 cat osman-wildcard.txt
 
