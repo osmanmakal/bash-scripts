@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 clear
 options=("Birinci Secenek" "Ikinci Secenek" "Ucuncu Secenek" "Dorduncu Secenek")
 menu() {
