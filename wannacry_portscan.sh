@@ -8,7 +8,7 @@ if (( ! $? == 0 ));then
   echo "nc komutu yok. Netcat yukleyip tekrar deneyiniz."
   exit 1
 else
-  system=$(which timeout > /dev/null;echo $?)
+  system=$(echo $OSTYPE | grep "darwin" > /dev/null;echo $?)
 fi
 
 bilgi() {
@@ -64,8 +64,8 @@ range() {
 ports() {
   for i in $ips;do
     for p in $port_range;do
-      if (( $system == 0 ));then
-        timeout 1 nc -zd $i $p > /dev/null
+      if (( ! $system == 0 ));then
+        nc -zd -w1 $i $p > /dev/null
       else
         nc -zd -G1 $i $p > /dev/null
       fi
